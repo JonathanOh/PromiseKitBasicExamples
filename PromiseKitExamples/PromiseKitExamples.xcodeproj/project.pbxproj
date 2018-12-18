@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D030DA51B21CEBAE51CA77D /* Pods_PromiseKitExamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01AA34037349C179FBB54574 /* Pods_PromiseKitExamples.framework */; };
 		D4B01D5021C9B250009CDDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B01D4F21C9B250009CDDA1 /* AppDelegate.swift */; };
 		D4B01D5221C9B250009CDDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B01D5121C9B250009CDDA1 /* ViewController.swift */; };
 		D4B01D5521C9B250009CDDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B01D5321C9B250009CDDA1 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01AA34037349C179FBB54574 /* Pods_PromiseKitExamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PromiseKitExamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CAC64E83CCBAE5998F86BB /* Pods-PromiseKitExamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseKitExamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseKitExamples/Pods-PromiseKitExamples.release.xcconfig"; sourceTree = "<group>"; };
 		D4B01D4C21C9B250009CDDA1 /* PromiseKitExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PromiseKitExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B01D4F21C9B250009CDDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4B01D5121C9B250009CDDA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		D4B01D5621C9B252009CDDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4B01D5921C9B252009CDDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4B01D5B21C9B252009CDDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD875C78ED9FD3B76E812705 /* Pods-PromiseKitExamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PromiseKitExamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PromiseKitExamples/Pods-PromiseKitExamples.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D030DA51B21CEBAE51CA77D /* Pods_PromiseKitExamples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F1CD3EEA0B1AB985F23E627 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD875C78ED9FD3B76E812705 /* Pods-PromiseKitExamples.debug.xcconfig */,
+				27CAC64E83CCBAE5998F86BB /* Pods-PromiseKitExamples.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		43CF0C7F8790BF751E99CE9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01AA34037349C179FBB54574 /* Pods_PromiseKitExamples.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D4B01D4321C9B250009CDDA1 = {
 			isa = PBXGroup;
 			children = (
 				D4B01D4E21C9B250009CDDA1 /* PromiseKitExamples */,
 				D4B01D4D21C9B250009CDDA1 /* Products */,
+				2F1CD3EEA0B1AB985F23E627 /* Pods */,
+				43CF0C7F8790BF751E99CE9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4B01D5E21C9B252009CDDA1 /* Build configuration list for PBXNativeTarget "PromiseKitExamples" */;
 			buildPhases = (
+				7FAC001EFBDE5B42B32431D2 /* [CP] Check Pods Manifest.lock */,
 				D4B01D4821C9B250009CDDA1 /* Sources */,
 				D4B01D4921C9B250009CDDA1 /* Frameworks */,
 				D4B01D4A21C9B250009CDDA1 /* Resources */,
+				880531010514594B1E711363 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7FAC001EFBDE5B42B32431D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PromiseKitExamples-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		880531010514594B1E711363 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PromiseKitExamples/Pods-PromiseKitExamples-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PromiseKitExamples/Pods-PromiseKitExamples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4B01D4821C9B250009CDDA1 /* Sources */ = {
@@ -280,15 +345,13 @@
 		};
 		D4B01D5F21C9B252009CDDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD875C78ED9FD3B76E812705 /* Pods-PromiseKitExamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CFLPK2AW6;
 				INFOPLIST_FILE = PromiseKitExamples/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = esohjay.PromiseKitExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,15 +361,13 @@
 		};
 		D4B01D6021C9B252009CDDA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27CAC64E83CCBAE5998F86BB /* Pods-PromiseKitExamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CFLPK2AW6;
 				INFOPLIST_FILE = PromiseKitExamples/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = esohjay.PromiseKitExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
