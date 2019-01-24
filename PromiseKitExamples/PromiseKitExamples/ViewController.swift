@@ -34,18 +34,19 @@ class ViewController: UIViewController {
             return async.promiseEightSeconds()
         }.done {
             print("eight seconds")
-        }.cauterize()
+            
+        }.catch { error in
+            print("error")
+        }
         
         // Wait until both async functions are done
         when(fulfilled: [async.promiseTwoSeconds(), async.promiseFiveSeconds()]).done {
             print("should only take 5 seconds")
         }.cauterize()
         
-        async.promiseStringInt().done { word in
-            print("do i have a word?")
-        }.catch { error in
-            print("error handling here!")
-        }
+//        async.promiseStringInt().done { word in
+//            print("do i have a \(word)?")
+//        }.cauterize()
         
     }
 }
@@ -61,9 +62,10 @@ class AsyncFunctions {
     }
     // PROMISE VERSION EXPANDED
     func promiseTwoSeconds() -> Promise<Void> {
+        
         return Promise { seal in
             return asyncFunctionTwoSeconds {
-                seal.fulfill()
+                seal.fulfill_()
             }
         }
     }
@@ -78,7 +80,7 @@ class AsyncFunctions {
     func promiseFiveSeconds() -> Promise<Void> {
         return Promise { seal in
             return asyncFunctionFiveSeconds {
-                seal.fulfill()
+                seal.fulfill_()
             }
         }
     }
@@ -93,7 +95,7 @@ class AsyncFunctions {
     func promiseEightSeconds() -> Promise<Void> {
         return Promise { seal in
             return asyncFunctionEightSeconds {
-                seal.fulfill()
+                seal.fulfill_()
             }
         }
     }
