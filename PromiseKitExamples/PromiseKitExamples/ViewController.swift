@@ -113,10 +113,14 @@ class AsyncFunctions {
                 if let word = word {
                     seal.fulfill(word)
                 } else {
-                    //seal.reject(<#T##error: Error##Error#>) STRING IS NIL ERROR
+                    seal.reject(Err.nilString)
                 }
             })
         }
+    }
+    
+    enum Err: Error {
+        case nilString
     }
     
 }
